@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flask — Pro further.</title>
+  <meta name="description" content="Flask. A cinematic, insulated water bottle in Fog. Stay cold. Stay bold." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ NAV ============ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#overview" class="nav-logo" aria-label="Flask home">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path d="M12 2c-.9 1.4-2.4 2.3-3.2 3.8-.9 1.6-.4 3.3.9 4.3-1.6.6-2.7 2.1-2.7 3.9 0 2.3 1.9 4.2 4.2 4.2s4.2-1.9 4.2-4.2c0-1.8-1.1-3.3-2.7-3.9 1.3-1 1.8-2.7.9-4.3C14.4 4.3 12.9 3.4 12 2z" fill="currentColor"/>
+        </svg>
+        <span>Flask</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#design">Design</a></li>
+        <li><a href="#tech">Tech</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#specs">Specs</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#buy" class="nav-buy">Buy</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="overview">
+    <!-- huge backlit lettering behind the product, Apple "PRO" style -->
+    <div class="hero-backlight" aria-hidden="true">PRO</div>
+
+    <div class="hero-copy reveal">
+      <h1 class="hero-title">Flask</h1>
+      <p class="hero-sub">Pro further.</p>
+      <div class="hero-cta">
+        <a href="#buy" class="btn btn-fill">Buy</a>
+        <a href="#tech" class="btn btn-link">Learn more ›</a>
+      </div>
+    </div>
+
+    <!-- glowing product centerpiece -->
+    <div class="hero-stage reveal">
+      <div class="bottle-wrap" id="bottleWrap">
+        <div class="bottle-glow" aria-hidden="true"></div>
+        <div class="bottle-tilt" id="bottleTilt">
+          <!-- Inline SVG bottle: crisp, self-contained, cannot collapse -->
+          <svg class="bottle" id="bottle" viewBox="0 0 240 620" width="240" height="620" role="img" aria-label="Flask insulated water bottle in Fog">
+            <defs>
+              <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0"    stop-color="#5f74b4"/>
+                <stop offset="0.18" stop-color="#9fb0dd"/>
+                <stop offset="0.42" stop-color="#e6ecfb"/>
+                <stop offset="0.5"  stop-color="#f4f7ff"/>
+                <stop offset="0.6"  stop-color="#dbe3f7"/>
+                <stop offset="0.82" stop-color="#9fb0dd"/>
+                <stop offset="1"    stop-color="#5f74b4"/>
+              </linearGradient>
+              <linearGradient id="capGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0"    stop-color="#7e91cf"/>
+                <stop offset="0.25" stop-color="#b7c4ec"/>
+                <stop offset="0.5"  stop-color="#e5ecfc"/>
+                <stop offset="0.75" stop-color="#b7c4ec"/>
+                <stop offset="1"    stop-color="#7e91cf"/>
+              </linearGradient>
+              <linearGradient id="collarGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0"    stop-color="#8b929c"/>
+                <stop offset="0.35" stop-color="#eef1f6"/>
+                <stop offset="0.5"  stop-color="#ffffff"/>
+                <stop offset="0.68" stop-color="#c9cfd8"/>
+                <stop offset="1"    stop-color="#8b929c"/>
+              </linearGradient>
+              <linearGradient id="glassSheen" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+                <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+
+            <!-- soft contact shadow -->
+            <ellipse class="bottle-contact" cx="120" cy="600" rx="86" ry="16"/>
+
+            <!-- carry loop -->
+            <path class="bottle-strap" d="M92 44 Q92 14 120 14 Q148 14 148 44"
+                  fill="none" stroke="url(#capGrad)" stroke-width="15" stroke-linecap="round"/>
+
+            <!-- flex cap -->
+            <rect class="bottle-cap" x="70" y="40" width="100" height="60" rx="16" fill="url(#capGrad)"/>
+            <!-- polished steel collar -->
+            <rect class="bottle-collar" x="66" y="98" width="108" height="20" rx="4" fill="url(#collarGrad)"/>
+
+            <!-- body -->
+            <path class="bottle-body" d="M52 128
+                     Q52 116 64 116 L176 116 Q188 116 188 128
+                     L188 556 Q188 596 148 596 L92 596 Q52 596 52 556 Z"
+                  fill="url(#bodyGrad)"/>
+
+            <!-- vertical sheen -->
+            <rect class="bottle-sheen" x="74" y="126" width="26" height="450" rx="13" fill="url(#glassSheen)"/>
+
+            <!-- brand emblem -->
+            <g class="bottle-emblem" transform="translate(120 300)">
+              <circle r="30" fill="rgba(255,255,255,0.16)"/>
+              <path transform="translate(-12 -12) scale(1)" d="M12 2c-.9 1.4-2.4 2.3-3.2 3.8-.9 1.6-.4 3.3.9 4.3-1.6.6-2.7 2.1-2.7 3.9 0 2.3 1.9 4.2 4.2 4.2s4.2-1.9 4.2-4.2c0-1.8-1.1-3.3-2.7-3.9 1.3-1 1.8-2.7.9-4.3C14.4 4.3 12.9 3.4 12 2z" fill="rgba(255,255,255,0.95)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="bottle-reflection" aria-hidden="true"></div>
+      </div>
+      <p class="hero-price reveal">Fog. From $44.95.</p>
+    </div>
+
+    <div class="scroll-hint reveal" aria-hidden="true">
+      <span></span>
+    </div>
+  </header>
+
+  <!-- ============ MARQUEE HIGHLIGHTS ============ -->
+  <section class="strip">
+    <div class="strip-item reveal"><span class="big">24<em>hrs</em></span><span class="lbl">cold</span></div>
+    <div class="strip-item reveal"><span class="big">12<em>hrs</em></span><span class="lbl">hot</span></div>
+    <div class="strip-item reveal"><span class="big">32<em>oz</em></span><span class="lbl">capacity</span></div>
+    <div class="strip-item reveal"><span class="big">18/8</span><span class="lbl">pro-grade steel</span></div>
+  </section>
+
+  <!-- ============ DESIGN ============ -->
+  <section class="feature dark" id="design">
+    <div class="feature-copy reveal">
+      <p class="eyebrow eyebrow-blue">Design</p>
+      <h2>Soft to hold.<br>Impossible to ignore.</h2>
+      <p class="body">A powder-coat finish in a serene periwinkle Fog, wrapped around a durable pro-grade body. Every curve is engineered to feel effortless in the hand.</p>
+    </div>
+  </section>
+
+  <!-- ============ TECH ============ -->
+  <section class="feature dark tech" id="tech">
+    <div class="feature-copy reveal">
+      <p class="eyebrow eyebrow-cyan">TempShield Insulation</p>
+      <h2>Temperature,<br>under your control.</h2>
+      <p class="body">Double-wall vacuum insulation keeps cold drinks cold for up to 24 hours and hot drinks hot for up to 12 — with zero condensation on the outside.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card-icon cold">❄</div>
+        <h3>Cold Lock</h3>
+        <p>Ice stays ice, all day long.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon hot">🔥</div>
+        <h3>Heat Hold</h3>
+        <p>Coffee at temperature till noon.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon dry">💧</div>
+        <h3>Sweat-Free</h3>
+        <p>No rings on your desk. Ever.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ COLORS ============ -->
+  <section class="feature colors" id="colors">
+    <div class="feature-copy reveal">
+      <p class="eyebrow eyebrow-blue">Finishes</p>
+      <h2>Pick your mood.</h2>
+    </div>
+
+    <div class="color-stage reveal">
+      <div class="mini-glow" aria-hidden="true"></div>
+      <svg class="mini-bottle" id="miniBottle" viewBox="0 0 160 400" width="160" height="400" role="img" aria-label="Flask bottle preview">
+        <defs>
+          <linearGradient id="miniBody" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0"    stop-color="#5f74b4" id="miniStop0"/>
+            <stop offset="0.42" stop-color="#e6ecfb" id="miniStop1"/>
+            <stop offset="0.5"  stop-color="#f4f7ff" id="miniStop2"/>
+            <stop offset="0.6"  stop-color="#dbe3f7" id="miniStop3"/>
+            <stop offset="1"    stop-color="#5f74b4" id="miniStop4"/>
+          </linearGradient>
+          <linearGradient id="miniCap" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0"   stop-color="#7e91cf" id="miniCapStop0"/>
+            <stop offset="0.5" stop-color="#e5ecfc" id="miniCapStop1"/>
+            <stop offset="1"   stop-color="#7e91cf" id="miniCapStop2"/>
+          </linearGradient>
+        </defs>
+        <path class="mini-strap" d="M60 30 Q60 8 80 8 Q100 8 100 30" fill="none" stroke="url(#miniCap)" stroke-width="10" stroke-linecap="round"/>
+        <rect class="mini-cap" x="46" y="26" width="68" height="40" rx="11" fill="url(#miniCap)"/>
+        <rect x="44" y="64" width="72" height="13" rx="3" fill="#e6ebf4"/>
+        <path class="mini-bodypath" d="M34 84 Q34 76 42 76 L118 76 Q126 76 126 84 L126 360 Q126 388 98 388 L62 388 Q34 388 34 360 Z" fill="url(#miniBody)"/>
+      </svg>
+    </div>
+
+    <div class="swatches reveal">
+      <button class="swatch active" data-color="#c9d3ec" data-cap="#b3c1e2" aria-label="Fog"><span></span></button>
+      <button class="swatch" data-color="#e7d4d0" data-cap="#d8bfba" aria-label="Blush"><span></span></button>
+      <button class="swatch" data-color="#cbd8cf" data-cap="#b3c6ba" aria-label="Sage"><span></span></button>
+      <button class="swatch" data-color="#2f3136" data-cap="#1e2024" aria-label="Black"><span></span></button>
+      <button class="swatch" data-color="#f4d58d" data-cap="#e8c169" aria-label="Sunbeam"><span></span></button>
+    </div>
+    <p class="swatch-name reveal" id="swatchName">Fog</p>
+  </section>
+
+  <!-- ============ SPECS ============ -->
+  <section class="specs" id="specs">
+    <h2 class="reveal">The details.</h2>
+    <div class="spec-grid">
+      <div class="spec reveal"><dt>Capacity</dt><dd>32 fl oz / 946 mL</dd></div>
+      <div class="spec reveal"><dt>Material</dt><dd>18/8 Pro-Grade Stainless Steel</dd></div>
+      <div class="spec reveal"><dt>Insulation</dt><dd>TempShield Double-Wall Vacuum</dd></div>
+      <div class="spec reveal"><dt>Cold</dt><dd>Up to 24 hours</dd></div>
+      <div class="spec reveal"><dt>Hot</dt><dd>Up to 12 hours</dd></div>
+      <div class="spec reveal"><dt>Cap</dt><dd>Flex Cap with carry loop</dd></div>
+      <div class="spec reveal"><dt>Mouth</dt><dd>Wide, fits ice cubes</dd></div>
+      <div class="spec reveal"><dt>Finish</dt><dd>Powder-coat, dishwasher safe</dd></div>
+    </div>
+  </section>
+
+  <!-- ============ BUY / CTA ============ -->
+  <section class="buy" id="buy">
+    <div class="buy-glow" aria-hidden="true"></div>
+    <h2 class="reveal">Flask.</h2>
+    <p class="reveal">Pro further.</p>
+    <p class="buy-price reveal">From $44.95</p>
+    <div class="hero-cta reveal">
+      <a href="#overview" class="btn btn-fill">Buy</a>
+      <a href="#specs" class="btn btn-link">See the specs ›</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>This is a design demo inspired by Apple's web aesthetic. Not affiliated with Apple or Hydro Flask.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
